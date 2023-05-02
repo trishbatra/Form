@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backdrop-filter: blur(10px); /* adds a blur effect */
+  background-color: rgba(29, 41, 57, 0.8); /* sets the background color with opacity */
+  z-index: 1000; /* ensures that the header is always on top */
+}
+
+::placeholder { 
+  color: black;
+  opacity: 1; 
+}
+:-ms-input-placeholder { 
+  color: black;
+}
+
+::-ms-input-placeholder { 
+  color: black;
+}
